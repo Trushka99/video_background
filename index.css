@@ -13,7 +13,7 @@ body {
   height: 100%;
 }
 
-video {
+.video {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -21,7 +21,7 @@ video {
   z-index: 0;
 }
 
-#svg-mask {
+.svg-mask {
   position: absolute;
   width: 100%;
   height: 100%;

@@ -1,10 +1,15 @@
 function updateMaskRects() {
   const svg = document.querySelector("#svg-mask");
   const mask = svg.querySelector("#reveal-mask");
-  mask.querySelectorAll('rect[data-blank="true"]').forEach((r) => r.remove());
+  mask
+    .querySelectorAll('rect[data-blank="true"]')
+    .forEach((r) => r.remove());
 
   document.querySelectorAll(".blank").forEach((span) => {
-    const rect = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+    const rect = document.createElementNS(
+      "http://www.w3.org/2000/svg",
+      "rect"
+    );
     const box = span.getBoundingClientRect();
     const wrapperBox = document
       .querySelector(".wrapper")
