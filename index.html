@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./index.css" />
+    <title>SVG Mask Example</title>
+  </head>
+  <body class="body">
+    <div class="wrapper">
+      <video class="video" autoplay muted loop playsinline>
+        <source src="./video.mp4" type="video/mp4" />
+      </video>
+
+      <svg class="svg-mask" id="svg-mask" preserveAspectRatio="none">
+        <defs>
+          <mask id="reveal-mask">
+            <rect width="100%" height="100%" fill="white" />
+          </mask>
+        </defs>
+        <rect
+          width="100%"
+          height="100%"
+          fill="black"
+          mask="url(#reveal-mask)"
+        />
+      </svg>
+
+      <div class="text-container">
+        <p>We’re here <span class="blank blank1"></span> to make</p>
+        <p>healthy <span class="blank blank2"></span> living effortless,</p>
+        <p>so you can <span class="blank blank3"></span> live longer</p>
+        <p>and happier <span class="blank blank4"></span></p>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
